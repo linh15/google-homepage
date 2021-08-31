@@ -1,0 +1,81 @@
+body {
+  text-align: center;
+}
+
+li {
+  display: inline;
+  padding-left: 0;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+#top-navbar {
+  list-style-type: none;
+  margin-left: 0;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+#bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  width: 95%;
+}
+
+a {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+}
+
+input {
+    margin-top: 30px;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    height: 40px;
+    width: 550px;
+    padding-left: 50px;
+    background-position: 10px 10px, 565px center;
+    background-image: url("https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/search-512.png"), url("https://logodix.com/logo/1214145.png");
+    background-size: 25px 25px, 15px 20px;
+    background-color: white;
+    background-repeat: no-repeat, no-repeat;
+}
+
+input:hover {
+  box-shadow: 5px 5px 5px lightgray;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  margin-top: 35px;
+  text-align: center;
+  background-color: verylightgray;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  border: 1px solid gray;
+}
