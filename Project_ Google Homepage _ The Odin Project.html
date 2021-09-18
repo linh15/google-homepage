@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!--
+    .
+  .o8
+.odin8o  .odino.  oo.ooooo.
+  888   d88' `88b  888' `88b
+  888   888   888  888   888
+  888 . 888   888  888   888
+  "888" `Y8odinP'  888bod8P'
+                   888
+                  odin!
+
+
+Our full stack curriculum is free and supported by a passionate open source community. Do you want to contribute? Chat with us at https://discord.gg/V75WSQG
+-->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"17c82925e3","applicationID":"2418536","transactionName":"d1xcEEpcDg1RS05aU0dAXQpLHBEJW04=","queueTime":2,"applicationTime":40,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"17c82925e3",applicationID:"2418536"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1210.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Odin Project empowers aspiring web developers to learn together">
+  <meta name="keywords" content="learn web development, learn ruby on rails, ruby on rails, ruby, rails">
+  <meta property="og:image" content="https://www.theodinproject.com/assets/og-logo-022832d4cefeec1d5266237be260192f5980f9bcbf1c9ca151b358f0ce1fd2df.png">
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="FU62MNhqIEZdmzn+hLNIkrF3T+p+Bxr3Qa+pRLfH8rJH0aDnHrnZYwfJF3i9ZrIrdZWqSm2mGZ2miS31Yb72Xg==" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <title>
+    Project: Google Homepage | The Odin Project
+  </title>
+
+  <link rel="stylesheet" media="all" href="/assets/application_stylesheet-cef54b8f7f315941d2ceba86da94b66c862229adfb5884b8d189393c0aba338c.css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Open+Sans:300,300italic,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <link rel="stylesheet" media="screen" href="/packs/css/application-857bf2d4.css" data-turbolinks-track="reload" />
+  <script src="/packs/js/application-5d7f6c70ebf20cb8170d.js"></script>
+</head>
+
+
+  <body class="line-numbers">
+    <div id="global-content-wrapper">
+      <div id="navbar-supported-content" class="modal modal-fullscreen-menu fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="navbar-brand">
+          <a class="logo" href="https://www.theodinproject.com/home">
+  <img alt="Odin Logo" class="logo__img" src="/assets/odin-logo-bd86cf893a3de1f1daceabc1377f58669776616a91ab70c601fd5c16a4686468.svg" />
+  <div class="logo__text"> The Odin Project </div>
+</a>
+        </div>
+        <button aria-label="Close" type="button" class="close" data-dismiss="modal">
+          <span class="sr-only">Close navigation</span>
+          <span class="close-icon">&times;</span>
+        </button>
+      </div>
+      <ul class="modal-links">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://www.theodinproject.com/paths">All Paths</a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" target="_blank" rel="noreferrer" href="https://discord.gg/fbFCkYabZB">Community</a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="/faq">FAQ</a>
+          </li>
+
+          <div class="dropdown-divider"></div>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="/sign_up">Sign Up</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/login">Log In</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="navbar navbar-expand-md navbar-light">
+  <div class="navbar-brand">
+    <a class="logo" href="https://www.theodinproject.com/home">
+  <img alt="Odin Logo" class="logo__img" src="/assets/odin-logo-bd86cf893a3de1f1daceabc1377f58669776616a91ab70c601fd5c16a4686468.svg" />
+  <div class="logo__text"> The Odin Project </div>
+</a>
+  </div>
+
+  <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="modal" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="toggle-navigation">
+    <span class="navbar-toggler-icon open"></span>
+    <span class="sr-only">Open navigation</span>
+  </button>
+
+    <nav class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="https://www.theodinproject.com/paths">All Paths</a>
+        </li>
+
+         <li class="nav-item ">
+          <a class="nav-link" target="_blank" rel="noreferrer" href="https://discord.gg/fbFCkYabZB">Community</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+
+        <li class="nav-link">
+          <span class='divider'>
+          </span>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" data-test-id="sign_up" href="/sign_up">Sign Up</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" data-test-id="user-login-link" href="/login">Log In</a>
+        </li>
+      </ul>
+    </nav>
+    </ul>
+  </nav>
+</div>
+
+
+<div class="nav-spacer"></div>
+
+<div class="container">
+</div>
+
+
+
+
+
+
+      
+
+<div class="container lesson-container lesson">
+  <div class="row">
+    <div class="col-12">
+      <div class="lesson-header">
+        <div class="banner">
+  <div class='banner__badge'>
+      <a href="/paths/foundations/courses/foundations">
+    <div class="course-badge" data-test-id='default-badge'>
+      <img alt="Foundations badge" class="course-badge__image" src="/assets/badge-foundations-21a2e04cbb0f20e4420bf13cd6593813ea6f97b0821e95ff238de3e6f26ff4bd.svg" />
+    </div>
+</a>
+  </div>
+
+  <a class="course-card-header__link" href="https://www.theodinproject.com/paths/foundations/courses/foundations">
+    <h1 class="banner__title" data-test-id="course-title-header">Foundations</h1>
+</a></div>
+
+        <h2 class="lesson-header__title accent" data-test-id="lesson-title-header">Project: Google Homepage</h2>
+      </div>
+    </div>
+
+    <div class="col-lg-3 lesson-nav-wrapper">
+      <div>
+        <div class="d-none d-lg-block d-xl-block lesson-navigation"></div>
+      </div>
+    </div>
+
+    <div class="col-xl-6 col-lg-8">
+      <div class="lesson-content">
+        <h3 id="introduction">Introduction</h3>
+
+<p>For this mini-project, you’ll deconstruct an existing web page and rebuild it. Don’t worry if the links don’t go anywhere and the search box doesn’t do anything when you submit it. The goal is to start thinking about how elements get placed on the page and roughly how they get styled and aligned. For some of you, this may be the first time you’ve actually tried to “build” something in HTML (very exciting!).</p>
+
+<p>Using the browser’s developer tools (right-clicking something on the page and clicking “inspect element” will get you there) will be your best friend. Build the page in a .html text file and open it in your browser to check it out.</p>
+
+<h3 id="try-these-before-starting">Try These Before Starting</h3>
+
+<p>These skills will be helpful for you when you start building. Either try them yourself or at least make sure you know how to do it:</p>
+
+<ol>
+  <li>Two ways to move a div around on the page</li>
+  <li>Stick a div onto the bottom or top of the page</li>
+  <li>Identify the background color of an existing webpage</li>
+  <li>Grab the URL for an image from an existing webpage</li>
+  <li>Center an element horizontally</li>
+  <li>Identify three ways you can include your CSS styles in a page</li>
+  <li>Understand how to use classes and ids to target CSS at specific elements on the page</li>
+  <li>Build a very basic form (even if it doesn’t “go” anywhere)</li>
+</ol>
+
+<h3 id="setting-up-your-projects-github-repository-optional">Setting Up Your Project’s GitHub Repository (optional)</h3>
+
+<p>As mentioned in the <a href="/courses/foundations/lessons/introduction-to-git">introduction to Git</a>, you’ll want to organize all your projects like a portfolio and link them to GitHub so it can be seen by others.</p>
+
+<p>If you do not know how to set up a repository, follow the instructions found in <a href="/courses/foundations/lessons/git-basics">Git Basics</a> to learn how.</p>
+
+<ol>
+  <li>If you haven’t already, create a folder on your computer called <code>the_odin_project</code> and <code>cd</code> into it. This folder will house all the projects you do at Odin.</li>
+  <li>Create a new repo for this project on GitHub.com and call it <code>google-homepage</code> (instead of <code>git-test</code>).</li>
+  <li>
+    <p>Then move that repository onto your local machine. The command should look like: <code>git clone git@github.com:username/google-homepage.git</code> (use SSH).</p>
+
+    <ul>
+      <li><a href="/courses/foundations/lessons/setting-up-git#step-2-configure-git-and-github">Setting up SSH on GitHub</a>.</li>
+    </ul>
+  </li>
+  <li>Now <code>cd</code> into the <code>google-homepage</code> project directory that is now on your local machine; set up your <code>README.md</code> file and write a brief introduction for what the current project is and what skills you have demonstrated once you have completed it. (You can do this as a self-reflection at the end of the project which is a good way to review what you have learned.)</li>
+</ol>
+
+<p>If you are having trouble:</p>
+
+<ul>
+  <li>Ensure you followed the steps <a href="/courses/foundations/lessons/setting-up-git#step-2-configure-git-and-github">here on Step 2.3</a> to clone from GitHub with SSH.</li>
+  <li>Refer to the <a href="/courses/foundations/lessons/git-basics">workflow</a> in the Git Basics Lesson.</li>
+</ul>
+
+<p>Note: All Git commands need to be run from inside your project’s folder (did you forget to <code>cd</code> into the <code>google-homepage</code> folder?)</p>
+
+<p><em>When you’re building your project, you will probably end up doing several <code>git add</code> + <code>git commit</code> cycles before being ready to push it up to GitHub with <code>git push origin main</code>.</em></p>
+
+<p><em>When writing code, it’s considered best practice to commit early and often. Commit every time you have a meaningful change in the code. This will create a timeline of your progress and show that your finished code didn’t appear out of nowhere.</em></p>
+
+<p>If you have entered <code>git push origin main</code> and typed out your username and password, if you refresh your GitHub page, you should see new files added onto GitHub.</p>
+
+<p>Okay, that’s enough Git for the moment – time to actually build stuff!</p>
+
+<h3 id="warning-about-looking-at-other-peoples-finished-project-code-before-you-have-completed-your-own">Warning About Looking at Other People’s Finished Project Code Before You have Completed Your Own</h3>
+
+<p>All of our projects have a “Student Solutions” section at the bottom for people to post their completed code and live websites for the projects. These are here for you to compare your <strong>completed</strong> code to and see what other routes people have chosen to take with their project code and designs.</p>
+
+<p>We know it may be tempting to look at the solutions when you get stuck or don’t know where to start, but <strong>don’t</strong> do it! Here are some reasons why:</p>
+
+<ul>
+  <li>All of the submitted projects are other <em>student</em> solutions. This means they are written by other people who are also still learning and may not necessarily be representative of “best practice” or quality code.</li>
+  <li>Looking at solutions robs you of the chance to develop your problem solving and researching skills. In the real world, there will not always be “solutions” for you to look at and you will have to come up with your own.</li>
+  <li>There are many different ways to achieve the same end result, it is not “one size fits all”.</li>
+  <li>An Analogy: “Looking at completed code is like learning how to make pizza dough from looking at a baked pizza.”  There is a lot more that goes into it than you would have assumed by only seeing the final product and not the process that lead to it.</li>
+</ul>
+
+<p>Once you have completed your project feel free to look at the other solutions to see alternative ways the project was completed.</p>
+
+<p><em>Note: It is okay to check the “Live Preview” to get an idea of layout and styling before starting but not the code files.</em></p>
+
+<p><strong>DO NOT PEEK. Come ask for help in our discord server!</strong></p>
+
+<h3 id="assignment">Assignment</h3>
+
+<h4 id="easy-version-build-the-googlecomhttpwwwgooglecom-homepage">Easy Version: Build the <a href="http://www.google.com">Google.com</a> homepage</h4>
+
+<p>(the simple one with just a search box).</p>
+
+<p>Inside your project folder, create your index.html file.</p>
+
+<ol>
+  <li>Tips:
+    <ul>
+      <li>DON’T BE A PERFECTIONIST! You’re just trying to make it <em>look</em> like google.com, not actually function like it and it doesn’t have to be spaced exactly the same way to the pixel. Any dropdown menus or form submissions or hover-highlighting should be ignored.</li>
+      <li>USE GOOGLE! You’ll probably run into roadblocks where you can’t figure out how to do something so do what all good devs do… Google it!</li>
+      <li>Now is a good time to <a href="https://youtu.be/mGORIVStWWc">set up the live server extension</a> in VSCode, if you haven’t already. This extension will save you from the hassle of refreshing the browser window repeatedly to see changes made in your code and will automatically load the most recent change in the browser window.</li>
+      <li>If you’re frustrated with trying to get buttons or inputs to style the way you want (for instance, they seem to just not respond to any styles), look into the CSS property <code>-webkit-appearance: none;</code> or <code>-moz-appearance</code> if you’re using Firefox.</li>
+      <li><a href="https://cdn.statically.io/gh/TheOdinProject/curriculum/284f0cdc998be7e4751e29e8458323ad5d320303/foundations/the_front_end/project_html_css/imgs/00.png">Use this image in place of the actual Google logo to avoid getting flagged as malicious</a></li>
+      <li><a href="https://web.archive.org/web/20191130234759/https://www.google.com/">Here’s a cached page of the Google home page for reference in case the original logo is not there.</a></li>
+      <li><a href="https://fonts.google.com/icons">Here’s a link to the Google Material Icons page. This is a great resource for free to use open source icons.</a></li>
+    </ul>
+  </li>
+  <li>Start with just putting the main elements on the page (the logo image and search form), then get them placed horizontally. You can either download the Google logo or link directly to its URL on the web in your <code>&lt;img&gt;</code> tag.</li>
+  <li>Next do the navbar across the top, first building the content and then trying to position it. Check out <a href="http://www.w3schools.com/css/css_navbar.asp">how to build a horizontal CSS navbar</a> if you’re lost.</li>
+  <li>Finally, put in the footer, which should be very similar to the top navbar.</li>
+  <li>In general, do as much on your own as you can before relying on the developer tools (or viewing the page’s source code) to help you along.</li>
+  <li>Push your project to GitHub using the instructions above! Then consider sharing your project with the community by submitting a link to your repository in the Solutions section below.</li>
+</ol>
+
+<h4 id="difficult-version-optional-build-the-googlecom-search-results-pagehttpswwwgooglecomsearchqbuildthiswebpage">Difficult Version (optional): Build the <a href="https://www.google.com/search?q=build+this+webpage">Google.com search results page</a></h4>
+
+<p>You should be able to reuse much of your code from before if you started with that project. Again, don’t worry about links to nowhere and forms that won’t submit and hard coding the search results (which you’ll have to do of course), just focus on placement and order of items on the page.</p>
+
+<p>Note: All the classes and id’s and names of elements that you inspect on Google’s home page are nonsensical strings (like <code>&lt;div class='srg'&gt;</code>). This is because the code was <strong>Minified</strong> (<a href="http://en.wikipedia.org/wiki/Minification_(programming)">see the Wikipedia entry here</a>), which removes or shortens unnecessary characters and names to help the page load faster. The HTML (or JavaScript or CSS) file will be smaller but the browser can still read it just fine.</p>
+
+<h3 id="viewing-your-project-on-the-web">Viewing your project on the web</h3>
+
+<p>If you want to show your work (the project) to others, or submit a solution below, you will need to publish your site so that others can access it from the web, rather than just on your local machine. The good news is that if you have your project on GitHub (as described above) doing this is incredibly simple.</p>
+
+<p>GitHub allows you to publish web projects directly from a GitHub repository. Doing this will allow you to access your project from <code>your-github-username.github.io/your-github-repo-name</code></p>
+
+<p>There are a couple of ways to go about doing this, but the simplest is this:</p>
+
+<ul>
+  <li>make sure that the main HTML file of your project is called <code>index.html</code>. If it is not, you will need to rename it.</li>
+  <li>go to your GitHub repo on the web and click the <strong>Settings</strong> button</li>
+  <li>click on <strong>Pages</strong> on the left side bar</li>
+  <li>change the <strong>Source</strong> from <em>none</em> to <em>main branch</em> and click Save.</li>
+  <li>it may take a few minutes (the GitHub website says up to 10) but your project should be accessible over the web from <code>your-github-username.github.io/your-github-repo-name</code> (obviously substituting your own details in the link)</li>
+</ul>
+
+<h3 id="additional-resources">Additional Resources</h3>
+
+<p>This section contains helpful links to other content. It isn’t required, so consider it supplemental for if you need to dive deeper into something.</p>
+
+<p>If you still feel shaky on your understanding of HTML and CSS, that’s okay! You don’t need to be an expert by any means yet. These resources should help if you want to shore up your understanding of things:</p>
+
+<ul>
+  <li>If you want to see the art of CSS, check out the <a href="https://stylestage.dev/">Style Stage</a>, which collects submissions that use identical HTML and modify only the CSS to create wildly different (and beautiful) sites.</li>
+  <li>Read through <a href="http://learn.shayhowe.com/html-css/terminology-syntax-intro">Shay Howe’s HTML&amp;CSS Tutorial</a>. Lesson 1 gives a solid overview and you can do the whole thing for a more in-depth understanding.</li>
+  <li>Learn more about GitHub using <a href="https://try.github.io">this tutorial</a> or read more in <a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1">this article</a>.</li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lesson-functions">
+  <div class="container">
+    <div class="card-main">
+
+
+      <div class="lesson-button-group">
+        <a title="Go back to &#39;Foundations&#39;" class="button button--secondary lesson-button-group__item lesson-button" data-test-id="view-course-btn" href="/paths/foundations/courses/foundations">View Course</a>
+
+  <a title="Go to login page" class="button button--primary lesson-button-group__item lesson-button" data-test-id="login_button" href="/login">Login to track progress</a>
+
+
+  <a title="Move on to &#39;Introduction to HTML and CSS&#39;" class="button button--secondary lesson-button-group__item lesson-button" data-test-id="next-lesson-btn" href="/paths/foundations/courses/foundations/lessons/introduction-to-html-and-css">Next Lesson</a>
+
+      </div>
+    </div>
+
+    <a target="_blank" rel="noreferrer noopener" class="lesson-functions__edit-lesson-link" href="https://github.com/TheOdinProject/curriculum/edit/main/foundations/the_front_end/project_html_css.md">
+      <span class="fab fa-github mr-1"></span>
+      <span> Improve this lesson on GitHub</span>
+</a>
+    <div class="bottom-cta">
+  <p class="bottom-cta__heading">Have a question?</p>
+
+  <p class="bottom-cta__sub-heading">Chat with our friendly Odin community in our Discord chatrooms!</p>
+  <a class="button button--secondary" target="_blank" rel="noreferrer" href="https://discord.gg/fbFCkYabZB">Open Discord</a>
+</div>
+
+
+    <div class="card-main advert">
+  <div class="advert__header">
+    <h2 class="advert__pitch">Are you interested in accelerating your web development learning experience?</h2>
+    <a href="https://www.thinkful.com/?utm_source=odin&utm_medium=cpc&utm_campaign=odin-homepage&utm_content=web-dev-3-icons" class="button button--primary ad">Get started</a>
+  </div>
+  <div class="advert__body">
+    <a href="https://www.thinkful.com/?utm_source=odin&utm_medium=cpc&utm_campaign=odin-homepage&utm_content=tf-logo" alt="Thinkful" class="advert__brand-anchor ad">
+        <div class="advert__brand">
+          <img alt="Thinkful Logo" class="advert__logo" src="/assets/advert/thinkful-logo-b82fbfcec7075b71956a786a15683fd87df7efe335429c80b3156d5dd3b74ef5.svg" />
+          <h2 class="advert__brand-name">Thinkful</h2>
+        </div>
+    </a>
+    <ul class="advert__icons-group">
+      <li class="advert__icons-group-item">
+        <img alt="5-6 months" class="advert__icon" src="/assets/advert/icon-calendar-13845c7b0b4004268fc976b15e5f4dee9a06d7b72fd962810aa0536e5f6e9806.svg" />
+        <p class="advert__icon-text">5-6 months</p>
+      </li>
+
+      <li class="advert__icons-group-item">
+        <img alt="Job Guarantee" class="advert__icon" src="/assets/advert/icon-guarantee-047f6434b566fba5814aae8aa8cb7c7e3c26ad7ec996cf7b37ebebee8e78cff4.svg" />
+        <p class="advert__icon-text">Job Guarantee</p>
+      </li>
+
+      <li class="advert__icons-group-item">
+        <img alt="1-on-1 Mentorship" class="advert__icon" src="/assets/advert/icon-mentor-1a98bfba6144856bdce308fe83cbfe0831429e79f5f3f6c4fb0c78153c7ab8b7.svg" />
+        <p class="advert__icon-text">1-on-1 Mentorship</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  </div>
+</div>
+
+    </div>
+
+    <footer id="footer">
+  <div class="footer-brand">
+    <a class="logo" href="https://www.theodinproject.com/home">
+  <img alt="Odin Logo" class="logo__img" src="/assets/odin-logo-bd86cf893a3de1f1daceabc1377f58669776616a91ab70c601fd5c16a4686468.svg" />
+  <div class="logo__text"> The Odin Project </div>
+</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://github.com/TheOdinProject"><span aria-label="github" class="accent fab fa-github"/></a>
+    <a href="https://discord.gg/V75WSQG"><span aria-label="discord chat" class="accent fab fa-discord"/></a>
+    <a href="https://www.facebook.com/theodinproject/"><span aria-label="facebook" class="accent fab fa-facebook"/></a>
+    <a href="https://twitter.com/TheOdinProject"><span aria-label="twitter" class="accent fab fa-twitter"/></a>
+  </div>
+  <div class="footer-links">
+    <div class="footer-links-container">
+      <a class="footer-link" href="/about">About</a>
+      <a class="footer-link" href="/faq">FAQ</a>
+      <a target="_blank" rel="noreferrer" class="footer-link" href="https://medium.com/the-odin-project">Blog</a>
+    </div>
+    <div class="footer-links-container">
+      <a class="footer-link" href="/success_stories">Success Stories</a>
+      <a class="footer-link" href="/contributing">Contribute</a>
+      <a class="footer-link" href="/terms_of_use">Terms of Use</a>
+    </div>
+  </div>
+
+</footer>
+
+    <div class="floating-dropdown">
+  <div class="floating-dropdown__item floating-dropdown--hidden-item text-center" data-toggle='tooltip' data-placement='left' title='Chat'>
+    <a target="_blank" rel="noreferrer" class="chat-floating-btn" href="https://discord.gg/fbFCkYabZB">
+      <i class="fas fa-comment"></i>
+</a>  </div>
+  <div class="floating-dropdown__item main-floating-btn">
+    <i class="fas fa-comments" aria-hidden="true"></i>
+  </div>
+</div>
+
+    <!-- Google Analytics Tracking Snippet -->
+<!-- Only load it if we're in a production environment! -->
+  
+  
+
+  <script type="text/javascript">  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41005438-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+    
+    
+    <script type='text/javascript'>
+      window.SENTRY_DSN = "https://6cc08494f58c45d0b78be7b6bea5d0cc@o572484.ingest.sentry.io/5721923"
+      window.currentUserLoggedIn = "false"
+
+    </script>
+
+    <script src="/packs/js/error_tracking-3d46a20431a4524aed64.js"></script>
+
+  </body>
+</html>
