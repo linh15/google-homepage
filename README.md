@@ -24,3 +24,6 @@ Top navigation bar and footer
 + apply Flexbox or Grid to corporate them with the search background
 - I'm Feeling Lucky button: find a way to shuffle them for other phrases
 - Footer: add click function for Settings, find out the right color for background, remove the white bar on the bottom of the page
+
+# Live demo
+https://linh15.github.io/google-homepage/
